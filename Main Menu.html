@@ -1,36 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
-        crossorigin="anonymous"></script>
-    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Senku Coffee</title>
     <link rel="stylesheet" href="Main Menu.css">
+    <style>
+        body {
+            padding-top: 90px;
+        }
+        section {
+            padding: 60px 0;
+            min-height: 400px;
+        }
+        /* .promo-background {
+            You might want to define styles for this if it's used
+            Example: background: url('path/to/your/background.jpg') no-repeat center center; background-size: cover;
+            For now, we'll remove it if it's not defined in Main Menu.css
+        }
+        */
+        .carousel-item img {
+            max-height: 500px;
+            object-fit: cover;
+        }
+        .menu-item img {
+             height: 200px;
+             object-fit: cover;
+        }
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+        .navbar-custom {
+             background-color: burlywood !important;
+        }
+        .navbar-brand, .nav-link {
+             color: rgb(0, 100, 0) !important;
+        }
+        .nav-link.active {
+            font-weight: bold;
+        }
+        .btn-outline-success {
+             color: rgb(0, 100, 0);
+             border-color: rgb(0, 100, 0);
+             margin-left: 5px;
+        }
+        .btn-outline-success:hover {
+             background-color: rgb(0, 100, 0);
+             color: white;
+        }
+
+    </style>
 </head>
+
 <body>
     <div id="header">
-        <!-- header -->
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color: burlywood;">
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
             <div class="container-fluid" style="margin: 0px 50px 0px 50px; padding: 15px;">
-                <a class="navbar-brand" href="#" style="margin-right: 20px; color: rgb(0, 100, 0);">Senku Coffee</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#home" style="margin-right: 20px;">Senku Coffee</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Menu</a>
+                            <a class="nav-link" href="#menu">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ulasan</a>
+                            <a class="nav-link" href="#ulasan">Ulasan</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -38,63 +85,240 @@
                                 Informasi
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Profil Anda</a></li>
-                                <li><a class="dropdown-item" href="#">About Us</a></li>
-                                <li><a class="dropdown-item" href="#">Kontak</a></li>
+                                <li><a class="dropdown-item" href="#">Profil Anda</a></li> <li><a class="dropdown-item" href="#about">About Us</a></li>
+                                <li><a class="dropdown-item" href="#kontak">Kontak</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">Feedback</a></li>
-                            </ul>
+                                <li><a class="dropdown-item" href="#">Feedback</a></li> </ul>
                         </li>
                     </ul>
                     <form class="d-flex" role="search">
-                        <button class="btn btn-outline-success" type="submit">Masuk</button>
-                        <button class="btn btn-outline-success" type="submit">Daftar</button>
-                    </form>
+                        <button class="btn btn-outline-success" type="button">Masuk</button> <button class="btn btn-outline-success" type="button">Daftar</button> </form>
                 </div>
             </div>
         </nav>
     </div>
-    
-    <div class="content">
-        <div class="promo-background"></div>
-        <div class="promo">
-            <div id="carouselExampleIndicators" class="carousel slide" style="margin: 0px 60px 0px 60px;">
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                        aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
+
+    <section id="home">
+        <div class="content">
+            <div class="promo">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="margin: 0px 60px 0px 60px;">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                            class="active" aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="Gambar/1.png" class="d-block w-100" alt="Promo Banner 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Promo Spesial Minggu Ini</h5>
+                                <p>Nikmati diskon 20% untuk semua minuman berbasis Espresso.</p>
+                              </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Gambar/2.png" class="d-block w-100" alt="Promo Banner 2">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Menu Baru: Iced Matcha Fusion</h5>
+                                <p>Perpaduan sempurna teh hijau asli dengan susu segar.</p>
+                              </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="Gambar/3.png" class="d-block w-100" alt="Promo Banner 3">
+                             <div class="carousel-caption d-none d-md-block">
+                                <h5>Senku Coffee: Tempat Terbaik untuk Bersantai</h5>
+                                <p>Suasana nyaman, kopi nikmat.</p>
+                              </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="Gambar/1.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Gambar/2.png" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="Gambar/3.png" class="d-block w-100" alt="...">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
             </div>
         </div>
-    </div>
-    <div class="Footer">
+    </section>
 
-    </div>
+    <section id="menu" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Menu Kami</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="Gambar/menu-espresso.jpg" class="card-img-top menu-item" alt="Espresso"> <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Espresso</h5>
+                            <p class="card-text">Ekstraksi kopi murni kaya rasa.</p>
+                            <p class="card-text mt-auto"><strong>Rp 18.000</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="Gambar/menu-cafelatte.jpg" class="card-img-top menu-item" alt="Cafe Latte"> <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Cafe Latte</h5>
+                            <p class="card-text">Perpaduan espresso dengan steamed milk lembut.</p>
+                            <p class="card-text mt-auto"><strong>Rp 25.000</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <img src="Gambar/menu-croissant.jpg" class="card-img-top menu-item" alt="Croissant"> <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">Butter Croissant</h5>
+                            <p class="card-text">Pastry renyah dan lembut, teman sempurna kopi Anda.</p>
+                            <p class="card-text mt-auto"><strong>Rp 15.000</strong></p>
+                        </div>
+                    </div>
+                </div>
+                </div>
+             <div class="text-center mt-4">
+                 <a href="#" class="btn btn-outline-success">Lihat Menu Lengkap</a> </div>
+        </div>
+    </section>
+
+    <section id="ulasan">
+        <div class="container">
+            <h2 class="text-center mb-5">Apa Kata Mereka?</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>"Kopinya mantap, tempatnya nyaman buat kerja!"</p>
+                                <footer class="blockquote-footer">Andi <cite title="Source Title">via Google Review</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>"Latte art nya keren, rasanya juga pas. Recommended!"</p>
+                                <footer class="blockquote-footer">Citra <cite title="Source Title">via Instagram</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                 <div class="col-md-4 mb-4">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>"Harga terjangkau, pilihan menunya banyak. Suka banget sama croissantnya."</p>
+                                <footer class="blockquote-footer">Budi <cite title="Source Title">Datang Langsung</cite></footer>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Tentang Kami</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-4">
+                    <img src="Gambar/about-us.jpg" class="img-fluid rounded" alt="Tentang Senku Coffee"> </div>
+                <div class="col-md-6">
+                    <h3>Selamat Datang di Senku Coffee</h3>
+                    <p>Senku Coffee lahir dari kecintaan kami terhadap kopi berkualitas dan keinginan untuk menciptakan ruang yang nyaman bagi komunitas.</p>
+                    <p>Kami percaya bahwa secangkir kopi yang nikmat dapat mencerahkan hari Anda. Oleh karena itu, kami hanya menggunakan biji kopi pilihan terbaik dan menyajikannya dengan sepenuh hati oleh barista kami yang berpengalaman.</p>
+                    <p>Lebih dari sekadar kedai kopi, Senku Coffee adalah tempat Anda bertemu teman, bekerja, atau sekadar menikmati waktu santai. Datang dan rasakan pengalaman ngopi yang berbeda!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="kontak">
+        <div class="container">
+            <h2 class="text-center mb-5">Hubungi Kami</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h4>Informasi Kontak</h4>
+                    <p><i class="bi bi-geo-alt-fill"></i> Jl. Kopi Nikmat No. 10, Jakarta, Indonesia</p>
+                    <p><i class="bi bi-telephone-fill"></i> (021) 123-4567</p>
+                    <p><i class="bi bi-envelope-fill"></i> info@senkucoffee.com</p>
+                    <p><i class="bi bi-clock-fill"></i> Buka Setiap Hari: 08:00 - 22:00 WIB</p>
+                    <h4 class="mt-4">Ikuti Kami</h4>
+                     <a href="#" class="text-dark me-2 fs-4"><i class="bi bi-instagram"></i></a>
+                     <a href="#" class="text-dark me-2 fs-4"><i class="bi bi-facebook"></i></a>
+                     <a href="#" class="text-dark fs-4"><i class="bi bi-twitter-x"></i></a>
+                </div>
+                <div class="col-md-6">
+                    <h4>Kirim Pesan</h4>
+                    <form>
+                        <div class="mb-3">
+                            <label for="contactName" class="form-label">Nama</label>
+                            <input type="text" class="form-control" id="contactName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="contactEmail" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="contactMessage" class="form-label">Pesan</label>
+                            <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-success">Kirim Pesan</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2025 Senku Coffee. All Rights Reserved.</p>
+            <p>
+                 <a href="#home" class="text-white-50 mx-2">Home</a> |
+                 <a href="#menu" class="text-white-50 mx-2">Menu</a> |
+                 <a href="#about" class="text-white-50 mx-2">About Us</a> |
+                 <a href="#kontak" class="text-white-50 mx-2">Kontak</a>
+             </p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
+
+    <script>
+        const sections = document.querySelectorAll('section');
+        const navLi = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
+
+        window.addEventListener('scroll', ()=> {
+            let current = '';
+            sections.forEach( section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+                     current = section.getAttribute('id');
+                }
+            })
+
+            navLi.forEach( a => {
+                a.classList.remove('active');
+                if (a.getAttribute('href') == #${current}) {
+                    a.classList.add('active');
+                }
+                 if (!current && a.getAttribute('href') === '#home') {
+                      a.classList.add('active');
+                 }
+            })
+        });
+    </script>
+
 </body>
 </html>
