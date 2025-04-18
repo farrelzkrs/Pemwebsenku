@@ -13,3 +13,22 @@
 .navbar-nav .nav-item {
     margin-right: 15px;
 }
+
+.btn-outline-success {
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #28a745;
+    color: #28a745;
+    background-color: transparent;
+    transition: all 0.3s ease;
+    margin-left: 20px;
+}
+
+.btn-outline-success:hover {
+    background-color: #28a745;
+    color: white;
+    border-color: #218838;
+}
