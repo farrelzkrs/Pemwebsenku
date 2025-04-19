@@ -82,7 +82,9 @@
     <div id="header">
         <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
             <div class="container-fluid" style="margin: 0px 50px 0px 50px; padding: 15px;">
-                <a class="navbar-brand" href="#home" style="margin-right: 20px;">Senku Coffee</a>
+                <a href="" style="display: flex; align-items: center;">
+                    <img src="Gambar/Senku kafe.png" alt="Logo Senku Coffee" class="navbar-logo">
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
