@@ -5,6 +5,11 @@ section {
     /* Give sections some minimum height */
 }
 
+.navbar-brand,
+.nav-link {
+    color: rgb(0, 100, 0) !important;
+}
+
 .navbar {
     border-bottom: 10px solid #006400;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
