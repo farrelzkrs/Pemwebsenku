@@ -15,8 +15,7 @@
 </head>
 
 <body>
-    <section id="navbar">
-        <div id="header">
+    <div id="header">
         <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
             <div class="container-fluid" style="margin: 0px 50px 0px 50px; padding: 15px;">
                 <a href="" style="display: flex; align-items: center;">
@@ -61,10 +60,9 @@
             </div>
         </nav>
     </div>
-    </section>
 
-    <div class="content">
         <section id="poster" class="position-relative text-center">
+        <div class="content">
             <img src="https://asset.mediaindonesia.com/news/2023/09/8a5e048b398c2ce7e0cf87d0f8569b33.jpeg" 
                 alt="Iklan Senku Coffee" 
                 class="img-fluid w-100" 
