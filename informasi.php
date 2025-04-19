@@ -13,7 +13,7 @@ session_start(); ?>
         crossorigin="anonymous"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <title>informasi</title>
-    <link rel="stylesheet" href="informasi.css">
+    <link rel="stylesheet" href="istyle.css">
 </head>
 
 <body>
@@ -31,13 +31,16 @@ session_start(); ?>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="Menu.html">Menu</a>
+                            <a class="nav-link" href="Menu.php">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="ulasan.html">Ulasan</a>
+                            <a class="nav-link" href="ulasan.php">Ulasan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="informasi.php">About Us</a>
                         </li>
                     </ul>
                     <div class="d-flex align-items-center">
