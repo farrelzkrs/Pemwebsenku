@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,94 +14,110 @@
         body {
             padding-top: 90px;
         }
+
         section {
             padding: 60px 0;
             min-height: 400px;
         }
-        /* .promo-background {
-            You might want to define styles for this if it's used
-            Example: background: url('path/to/your/background.jpg') no-repeat center center; background-size: cover;
-            For now, we'll remove it if it's not defined in Main Menu.css
-        }
-        */
+
         .carousel-item img {
             max-height: 500px;
             object-fit: cover;
         }
+
         .menu-item img {
             height: 200px;
             object-fit: cover;
         }
+
         footer {
             background-color: #343a40;
             color: white;
             padding: 30px 0;
         }
+
         .navbar-custom {
             background-color: burlywood !important;
         }
-        .navbar-brand, .nav-link {
+
+        .navbar-brand,
+        .nav-link {
             color: rgb(0, 100, 0) !important;
         }
+
         .nav-link.active {
             font-weight: bold;
         }
+
         .btn-outline-success {
             color: rgb(0, 100, 0);
             border-color: rgb(0, 100, 0);
+            margin-left: 5px;
         }
+
         .btn-outline-success:hover {
             background-color: rgb(0, 100, 0);
             color: white;
         }
 
+        .btn-success {
+            background-color: rgb(0, 100, 0);
+            border-color: rgb(0, 100, 0);
+            color: white;
+            margin-left: 5px;
+        }
+
+        .btn-success:hover {
+            background-color: darkgreen;
+            border-color: darkgreen;
+        }
+
+        .btn-outline-danger {
+            margin-left: 5px;
+        }
     </style>
 </head>
 
 <body>
-    <div class="header">
-        <!-- header -->
-        <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color: burlywood;">
+    <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
             <div class="container-fluid" style="margin: 0px 50px 0px 50px; padding: 15px;">
-                <a href="" style="display: flex; align-items: center;">
-                    <img src="Gambar/Senku kafe.png" alt="Logo Senku Coffee" class="navbar-logo">
-                </a>
-                <!-- <a class="navbar-brand" href="#" style="margin-right: 20px; color: rgb(0, 100, 0);">Senku Coffee</a> -->
+                <a class="navbar-brand" href="#home" style="margin-right: 20px;">Senku Coffee</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="Main Menu.html">Home</a>
+                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="Menu.html">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Ulasan</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Informasi
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Profil Anda</a></li>
-                                <li>
-                                    <hr class="dropdown-divider">
-                                </li>
-                                <li><a class="dropdown-item" href="informasi.html#about">About Us</a></li>
-                                <li><a class="dropdown-item" href="informasi.html#kontak">Kontak</a></li>
-                            </ul>
+                            <a class="nav-link" href="ulasan.html">Ulasan</a>
                         </li>
                     </ul>
-                    <form class="d-flex" role="search">
-                        <button class="btn btn-outline-success" type="submit">Masuk</button>
-                        <button class="btn btn-outline-success" type="submit">Daftar</button>
-                    </form>
+                    <div class="d-flex align-items-center">
+                        <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true): ?>
+                        <div class="nav-item dropdown" style="color: rgb(70, 47, 5);">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <?php echo htmlspecialchars($_SESSION['username']); ?>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Account</a></li>
+                                <li><a class="dropdown-item" href="#about">Settings</a></li>
+                                <li><a href="logout.php" class="btn text-danger">Logout</a></li>
+                            </ul>
+                        </div>
+                        <?php else: ?>
+                        <a href="login.php" class="btn btn-dark me-2">Masuk</a>
+                        <a href="daftar.php" class="btn btn-light">Daftar</a>
+                        <?php endif; ?>
+                    </div>
                 </div>
             </div>
         </nav>
