@@ -52,3 +52,10 @@
     background-color: rgba(120, 90, 51, 0.5);
     z-index: 0;
 }
+
+.navbar-logo {
+    height: 65px;
+    /* Sesuaikan tinggi logo dengan tinggi tulisan di navbar */
+    width: auto;
+    /* Menjaga proporsi gambar */
+}
