@@ -246,6 +246,9 @@
                     </div>
                 </div>
             </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-outline-success w-50">Lihat Ulasan Lain..</a>
+            </div>
         </div>
     </section>
 
