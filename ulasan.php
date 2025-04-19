@@ -10,6 +10,72 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="ulasan.css">
+  <style>
+        body {
+            padding-top: 90px;
+        }
+
+        section {
+            padding: 60px 0;
+            min-height: 400px;
+        }
+
+        .carousel-item img {
+            max-height: 500px;
+            object-fit: cover;
+        }
+
+        .menu-item img {
+            height: 200px;
+            object-fit: cover;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 30px 0;
+        }
+
+        .navbar-custom {
+            background-color: burlywood !important;
+        }
+
+        .navbar-brand,
+        .nav-link {
+            color: rgb(0, 100, 0) !important;
+        }
+
+        .nav-link.active {
+            font-weight: bold;
+        }
+
+        .btn-outline-success {
+            color: rgb(0, 100, 0);
+            border-color: rgb(0, 100, 0);
+            margin-left: 5px;
+        }
+
+        .btn-outline-success:hover {
+            background-color: rgb(0, 100, 0);
+            color: white;
+        }
+
+        .btn-success {
+            background-color: rgb(0, 100, 0);
+            border-color: rgb(0, 100, 0);
+            color: white;
+            margin-left: 5px;
+        }
+
+        .btn-success:hover {
+            background-color: darkgreen;
+            border-color: darkgreen;
+        }
+
+        .btn-outline-danger {
+            margin-left: 5px;
+        }
+    </style>
 </head>
 
 <body>
