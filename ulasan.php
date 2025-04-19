@@ -1,3 +1,6 @@
+/* Hendrico Edhent Surya Pratama (23081010070) */
+
+<?php section_start(); ?>
 <!DOCTYPE html>
 <html lang="id">
 
@@ -10,52 +13,54 @@
 </head>
 
 <body>
-  <div class="header">
-    <!-- header -->
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top" style="background-color: burlywood;">
-      <div class="container-fluid" style="margin: 0px 50px 0px 50px; padding: 15px;">
-        <a href="" style="display: flex; align-items: center;">
-          <img src="Senku kafe.png" alt="Logo Senku Coffee" class="navbar-logo">
-        </a>
-        <!-- <a class="navbar-brand" href="#" style="margin-right: 20px; color: rgb(0, 100, 0);">Senku Coffee</a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="Main Menu.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="Menu.html">Menu</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link active" href="#">Ulasan</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Informasi
-              </a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Profil Anda</a></li>
-                <li>
-                  <hr class="dropdown-divider">
-                </li>
-                <li><a class="dropdown-item" href="#">About Us</a></li>
-                <li><a class="dropdown-item" href="#">Kontak</a></li>
-                <li><a class="dropdown-item" href="#">Feedback</a></li>
-              </ul>
-            </li>
-          </ul>
-          <form class="d-flex" role="search">
-            <button class="btn btn-outline-success" type="submit">Masuk</button>
-            <button class="btn btn-outline-success" type="submit">Daftar</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-  </div>
+  <div id="header">
+        <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+            <div class="container-fluid" style="margin: 0px 50px 0px 50px; padding: 15px;">
+                    <a href="index.php" style="display: flex; align-items: center;">
+                        <img src="Gambar/Senku kafe.png" alt="Logo Senku Coffee" class="navbar-logo">
+                    </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto me-2 mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.php">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Menu.php">Menu</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="ulasan.php">Ulasan</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="informasi.php">About Us</a>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center">
+                        <?php if (isset($_SESSION['user_logged_in']) && $_SESSION['user_logged_in'] === true): ?>
+                        <div class="nav-item dropdown" style="color: rgb(70, 47, 5);">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <?php echo htmlspecialchars($_SESSION['username']); ?>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Account</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li><a href="logout.php" class="btn text-danger">Logout</a></li>
+                            </ul>
+                        </div>
+                        <?php else: ?>
+                        <a href="login.php" class="btn btn-dark me-2">Masuk</a>
+                        <a href="daftar.php" class="btn btn-light">Daftar</a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
   <!-- Ulasan Kritikus -->
   <section class="kritikus-section" style="margin-top: 120px;">
     <div class="carousel-bg" style="object-fit: cover; width: 105%;">
