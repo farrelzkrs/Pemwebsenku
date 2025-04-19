@@ -62,3 +62,10 @@ footer {
 .btn-outline-danger {
     margin-left: 5px;
 }
+
+.navbar-logo {
+    height: 65px;
+    /* Sesuaikan tinggi logo dengan tinggi tulisan di navbar */
+    width: auto;
+    /* Menjaga proporsi gambar */
+}
