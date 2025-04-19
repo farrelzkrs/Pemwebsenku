@@ -9,73 +9,7 @@
         integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <title>Senku Coffee</title>
-    <link rel="stylesheet" href="Main Menu.css">
-    <style>
-        body {
-            padding-top: 90px;
-        }
-
-        section {
-            padding: 60px 0;
-            min-height: 400px;
-        }
-
-        .carousel-item img {
-            max-height: 500px;
-            object-fit: cover;
-        }
-
-        .menu-item img {
-            height: 200px;
-            object-fit: cover;
-        }
-
-        footer {
-            background-color: #343a40;
-            color: white;
-            padding: 30px 0;
-        }
-
-        .navbar-custom {
-            background-color: burlywood !important;
-        }
-
-        .navbar-brand,
-        .nav-link {
-            color: rgb(0, 100, 0) !important;
-        }
-
-        .nav-link.active {
-            font-weight: bold;
-        }
-
-        .btn-outline-success {
-            color: rgb(0, 100, 0);
-            border-color: rgb(0, 100, 0);
-            margin-left: 5px;
-        }
-
-        .btn-outline-success:hover {
-            background-color: rgb(0, 100, 0);
-            color: white;
-        }
-
-        .btn-success {
-            background-color: rgb(0, 100, 0);
-            border-color: rgb(0, 100, 0);
-            color: white;
-            margin-left: 5px;
-        }
-
-        .btn-success:hover {
-            background-color: darkgreen;
-            border-color: darkgreen;
-        }
-
-        .btn-outline-danger {
-            margin-left: 5px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -114,7 +48,7 @@
                             </a>
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="#">Account</a></li>
-                                <li><a class="dropdown-item" href="#about">Settings</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
                                 <li><a href="logout.php" class="btn text-danger">Logout</a></li>
                             </ul>
                         </div>
@@ -211,7 +145,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="#" class="btn btn-outline-success w-25">Lihat Menu Lengkap</a>
+                <a href="Menu.css" class="btn btn-outline-success w-25">Lihat Menu Lengkap</a>
             </div>
         </div>
     </section>
@@ -252,7 +186,7 @@
                 </div>
             </div>
             <div class="text-center mt-4">
-                <a href="#" class="btn btn-outline-success w-50">Lihat Ulasan Lain..</a>
+                <a href="ulasan.php" class="btn btn-outline-success w-50">Lihat Ulasan Lain..</a>
             </div>
         </div>
     </section>
@@ -294,48 +228,7 @@
                     <h3>Selamat Datang di Senku Coffee</h3>
                     <p>Senku Coffee lahir dari kecintaan kami terhadap kopi berkualitas dan keinginan untuk menciptakan
                         ruang yang nyaman bagi komunitas.</p>
-                    <p>Kami percaya bahwa secangkir kopi yang nikmat dapat mencerahkan hari Anda. Oleh karena itu, kami
-                        hanya menggunakan biji kopi pilihan terbaik dan menyajikannya dengan sepenuh hati oleh barista
-                        kami yang berpengalaman.</p>
-                    <p>Lebih dari sekadar kedai kopi, Senku Coffee adalah tempat Anda bertemu teman, bekerja, atau
-                        sekadar menikmati waktu santai. Datang dan rasakan pengalaman ngopi yang berbeda!</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="kontak">
-        <div class="container">
-            <h2 class="text-center mb-5">Hubungi Kami</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
-                    <h4>Informasi Kontak</h4>
-                    <p><i class="bi bi-geo-alt-fill"></i> Jl. Kopi Nikmat No. 10, Jakarta, Indonesia</p>
-                    <p><i class="bi bi-telephone-fill"></i> (021) 123-4567</p>
-                    <p><i class="bi bi-envelope-fill"></i> info@senkucoffee.com</p>
-                    <p><i class="bi bi-clock-fill"></i> Buka Setiap Hari: 08:00 - 22:00 WIB</p>
-                    <h4 class="mt-4">Ikuti Kami</h4>
-                    <a href="#" class="text-dark me-2 fs-4"><i class="bi bi-instagram"></i></a>
-                    <a href="#" class="text-dark me-2 fs-4"><i class="bi bi-facebook"></i></a>
-                    <a href="#" class="text-dark fs-4"><i class="bi bi-twitter-x"></i></a>
-                </div>
-                <div class="col-md-6">
-                    <h4>Kirim Pesan</h4>
-                    <form>
-                        <div class="mb-3">
-                            <label for="contactName" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="contactName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="contactEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="contactEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="contactMessage" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">Kirim Pesan</button>
-                    </form>
+                    <a class="btn btn-outline-success w-25" href="informasi.php">Read More..</a>
                 </div>
             </div>
         </div>
