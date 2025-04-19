@@ -146,8 +146,10 @@ session_start(); ?>
     <section id="kontak">
         <div class="container">
             <h2 class="text-center mb-5">Hubungi Kami</h2>
-            <div class="row">
-                <div class="col-md-6 mb-4">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.179561534431!2d112.78574977476117!3d-7.333721192674722!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fab87edcad15%3A0xb26589947991eea1!2sUniversitas%20Pembangunan%20Nasional%20%22Veteran%22%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1745070842463!5m2!1sid!2sid"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="w-100 rounded-5"></iframe>
                     <h4>Informasi Kontak</h4>
                     <p><i class="bi bi-geo-alt-fill"></i> Jl. Kopi Nikmat No. 10, Jakarta, Indonesia</p>
                     <p><i class="bi bi-telephone-fill"></i> (021) 123-4567</p>
@@ -158,26 +160,6 @@ session_start(); ?>
                     <a href="#" class="text-dark me-2 fs-4"><i class="bi bi-facebook"></i></a>
                     <a href="#" class="text-dark fs-4"><i class="bi bi-twitter-x"></i></a>
                 </div>
-                <div class="col-md-6">
-                    <h4>Kirim Feedback</h4>
-                    <form>
-                        <div class="mb-3">
-                            <label for="contactName" class="form-label">Nama</label>
-                            <input type="text" class="form-control" id="contactName" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="contactEmail" class="form-label">Email</label>
-                            <input type="email" class="form-control" id="contactEmail" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="contactMessage" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="contactMessage" rows="4" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-success">Kirim Pesan</button>
-                    </form>
-                </div>
-            </div>
-        </div>
     </section>
     
     <footer class="text-center">
