@@ -11,7 +11,7 @@
         integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
         crossorigin="anonymous"></script>
     <title>Menu</title>
-    <link rel="stylesheet" href="Menu.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
